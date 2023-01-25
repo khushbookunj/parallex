@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only You</title>
+</head>
+<body>
+    <img src="C:\Users\khusabu\Desktop"/>
+    <div id="container">
+    <h6 id="head-1" class="masai">I AM KHUSHBOO</h6>
+        <button onClick="myFunction()">Click me</button>
+    <p id="para"> i am paragraph</p>
+</div>
+    <div id="box"> i am div</div>
+    <br/>
+    <h2 id="like">show likes count here</h2>
+    <h2 id="dislike">show dislikes value here</h2>
+    <button onClick="likeFun()">Likes</button>
+    <button onClick="dislikefun()">Dislikes</button>
+<h1 id="head-2">DOM 1 Assigment</h1>
+<button id="btn" onClick="completeAssig()">Mark as Complete</button>
+
+<br/>
+<input id="name" type="text" placeholder="enter the name" value="" />
+<input id="mbl" type="number" placeholder="enter the mobile number" />
+<input id="mail" type="email" placeholder="enteer th email id" />
+<button onClick="catchValue()">Submit</button>
+<h1 id="display-name">show the name</h1>
+<h1 id="display-mobile">show the mobile</h1>
+<h1 id="display-mail">show the email</h1>
+<select id="gender">
+    <option value="">select gender</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+
+</select>
+<button onClick="submit()">submit</button>
+</body>
+</html>
+<script>
+    console.log("khushboo")
+    var arr=[1,2,3,4,5];
+    console.log(arr[3]);
+    var obj={name:"khushboo",place: "Ghosi"};
+    console.log(obj)
+    console.log(document.title)
+    console.log(document)
+    console.log(document.body)
+    console.log(document.head)
+console.log(typeof document)
+var count=0
+function myFunction(){
+  
+alert("Someone clicked me")
+count++;
+alert(count)
+//console.log(count)
+}
+var heading=document.getElementById("head-1")
+console.log(heading)
+var paragraph=document.getElementById("para").innerText
+console.log(paragraph)
+var division=document.getElementById("box").textContent
+console.log(division)
+var title=document.title
+console.log(title)
+var cost=document.getElementById("container").innerText
+console.log(cost)
+var cost1=document.getElementById("container").innerHTML
+console.log(cost1)
+var like=0
+var dislike=0
+function likeFun(){
+    like++;
+   // console.log(like)
+   document.getElementById("like").innerText="likes- "+like
+
+}
+function dislikefun(){
+    dislike++;
+    //console.log(dislike)
+    document.getElementById("dislike").innerText="dislikes- "+dislike
+}
+function completeAssig(){
+    document.getElementById("head-2").innerText="Dom-1 Assignment complete"
+    document.getElementById("btn").innerText="Complete"
+}
+document.getElementById("like").style.color="red"
+document.getElementById("btn").style.backgroundColor="rgb(0,256,0)"
+document.getElementById("btn").style.color="white"
+function catchValue(){
+    var studentName=document.getElementById("name").value
+var mobile=document.getElementById("mbl").value
+var email=document.getElementById("mail").value
+document.getElementById("display-name").innerText="name- "+studentName
+document.getElementById("display-mobile").innerText="mobile- "+mobile
+document.getElementById("display-mail").innerText="email- "+email
+//console.log(mobile)
+//console.log(email)
+//console.log(studentName)
+}
+function submit(){
+var gen=document.getElementById("gender").value
+console.log(gen)
+}
+</script>
